@@ -1,0 +1,44 @@
+{
+  "name": "tour-interativo-empreendimentos",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "oxlint",
+    "preview": "vite preview",
+    "verificar": "tsc --noEmit -p tsconfig.app.json && prettier --check src/core src/data src/empreendimentos src/ui && npm run build"
+  },
+  "dependencies": {
+    "@react-three/drei": "^10.7.9",
+    "@react-three/fiber": "^9.8.2",
+    "@react-three/postprocessing": "^3.2.2",
+    "clsx": "^2.1.1",
+    "framer-motion": "^14.7.1",
+    "postprocessing": "^6.39.5",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "suncalc": "^2.1.1",
+    "three": "^0.186.1",
+    "zustand": "^5.0.16"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/node": "^24.19.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@types/suncalc": "^1.9.2",
+    "@types/three": "^0.186.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "oxlint": "^1.89.0",
+    "prettier": "^3.9.10",
+    "tailwindcss": "^4.3.3",
+    "typescript": "~7.0.2",
+    "vite": "^8.3.5"
+  },
+  "description": "Tour interativo em 3D para venda de imóvel em reunião remota. Village One e Flat Premium II, Santarém/PA.",
+  "engines": {
+    "node": ">=20.19"
+  }
+}

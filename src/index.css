@@ -1,0 +1,66 @@
+@import 'tailwindcss';
+
+/**
+ * Tokens do Village One. Peça de arquitetura, não de software:
+ * fundo profundo, tipografia serifada no nome, acentos em areia e verde-rio.
+ */
+@theme {
+  --color-areia-50: #faf7f2;
+  --color-areia-100: #f1ebe0;
+  --color-areia-200: #e2d7c5;
+  --color-areia-300: #cdbba0;
+  --color-areia-400: #b59b76;
+
+  --color-rio-300: #7fb3ae;
+  --color-rio-500: #3d7d78;
+  --color-rio-700: #1f4f4c;
+
+  --color-grafite-500: #4a4f52;
+  --color-grafite-700: #2a2e31;
+  --color-grafite-800: #1d2123;
+  --color-grafite-900: #121517;
+  --color-grafite-950: #0a0c0d;
+
+  --color-disponivel: #6fbf8e;
+  --color-reservada: #e0b765;
+  --color-vendida: #b4595b;
+
+  --font-display: 'Cormorant Garamond', 'Georgia', serif;
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+
+  --radius-chip: 999px;
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+  body {
+    margin: 0;
+    background: var(--color-grafite-950);
+    color: var(--color-areia-100);
+    font-family: var(--font-sans);
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer components {
+  /* Vidro fosco usado por toda a UI sobre a cena 3D. */
+  .vidro {
+    background: color-mix(in srgb, var(--color-grafite-900) 72%, transparent);
+    backdrop-filter: blur(20px) saturate(140%);
+    border: 1px solid color-mix(in srgb, var(--color-areia-200) 14%, transparent);
+  }
+  .chip {
+    @apply rounded-full px-3.5 py-1.5 text-[13px] leading-none whitespace-nowrap transition-colors duration-200;
+  }
+  .chip-off {
+    @apply text-areia-200/70 hover:text-areia-50 hover:bg-white/8;
+  }
+  .chip-on {
+    @apply bg-areia-100 text-grafite-900 font-medium;
+  }
+}
