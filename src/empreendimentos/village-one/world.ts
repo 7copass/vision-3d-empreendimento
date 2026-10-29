@@ -158,3 +158,6 @@ export function ancoraDeRotulo(
 
 /** Coordenadas do empreendimento, para o sol. */
 export const SITE = { lat: -2.4431, lng: -54.7083, fusoHoras: -3 } as const
+
+/** Estado de luz em que o tour abre. Village One tem as duas faces iluminadas. */
+export const ABERTURA = { hora: 12, mes: 6, preset: 'meiodia' } as const

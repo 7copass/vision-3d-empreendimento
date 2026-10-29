@@ -5,6 +5,7 @@
 import { create } from 'zustand'
 import type { Filtros, Modo, PresetHora, TowerId, Unidade } from './types'
 import { UNIDADES } from '../data/inventory'
+import { ABERTURA } from './world'
 
 const HORA_DO_PRESET: Record<PresetHora, number> = {
   manha: 7.5,
@@ -79,9 +80,9 @@ interface TourState {
 }
 
 export const useTour = create<TourState>((set) => ({
-  hora: 12,
-  mes: 6,
-  preset: 'meiodia',
+  hora: ABERTURA.hora,
+  mes: ABERTURA.mes,
+  preset: ABERTURA.preset,
   presetExato: true,
   setHora: (hora) => set({ hora, preset: presetDaHora(hora), presetExato: false }),
   setMes: (mes) => set({ mes }),

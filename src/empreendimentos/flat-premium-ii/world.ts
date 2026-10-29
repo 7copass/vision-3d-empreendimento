@@ -131,3 +131,11 @@ export function ancoraDeRotulo(
 
 /** Rua Magnólia com Alameda Trinta e Três, Santarém/PA. */
 export const SITE = { lat: -2.4431, lng: -54.7083, fusoHoras: -3 } as const
+
+/**
+ * Estado de luz em que o tour abre.
+ * A câmera de órbita enquadra a face sul, e em junho ao meio-dia o sol está ao
+ * norte — a fachada da abertura ficaria na sombra. O fim de tarde é o quadro
+ * que vende: luz rasante na fachada e sombra longa na rua.
+ */
+export const ABERTURA = { hora: 17.6, mes: 6, preset: 'portaldosol' } as const

@@ -7,7 +7,7 @@
  * saber que existe mais de um empreendimento. A geometria específica de cada
  * um importa do próprio mundo, nunca desta fachada.
  */
-import type { Orientacao, Posicao, TowerId } from './types'
+import type { Orientacao, Posicao, PresetHora, TowerId } from './types'
 import { ATIVO } from './ativo'
 
 const w = ATIVO.world
@@ -38,6 +38,7 @@ export const ALTURA_COROAMENTO: number = w.ALTURA_COROAMENTO
 export const VISTA_RECUO: number = w.VISTA_RECUO
 export const VISTA_QUEDA: number = w.VISTA_QUEDA
 export const SITE = w.SITE
+export const ABERTURA: { hora: number; mes: number; preset: PresetHora } = w.ABERTURA
 
 export const torreById = (id: TowerId): TowerSpec => w.torreById(id) as TowerSpec
 export const baseDoPavimento = (andar: number): number => w.baseDoPavimento(andar)
